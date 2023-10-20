@@ -1,7 +1,7 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
         //两个区间重叠的特征就是 starts[1]>end[0]
-        //如何合并两个区间: [starts[0],end[1]]
+        //如何合并两个区间: 比较下标为1的元素，元素大的作为右区间
 
         //使二维数组的第一个元素有序
         Arrays.sort(intervals,(a,b) -> a[0]- b[0]);

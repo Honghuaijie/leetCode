@@ -20,7 +20,6 @@ class Solution {
                 lists.get(lists.size()-1)[1] = Math.max(lists.get(lists.size()-1)[1],right);
             }
         }
-
         return lists.toArray(new int[lists.size()][]);
     }
 }
