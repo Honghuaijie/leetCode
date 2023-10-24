@@ -1,0 +1,24 @@
+class Solution {
+    public int countAsterisks(String s) {
+        /**
+        我们先设置一个flag=false表示没有遇到| 之后如果每遇到|就让他取反
+        当flag=true的时候不进行取数
+         */
+
+         char ch ;
+         boolean flag = false;
+         int total = 0; //*号的个数
+         int i = 0;
+         while(i < s.length()){
+             ch = s.charAt(i);
+             if(ch == '*'){
+                 total ++;
+                 
+             }else if (ch == '|'){ //如果遇到|就定位到第二个|坐标的位置
+                 i = s.indexOf('|',i+1) ;
+             }
+             i +=1;
+         }
+         return total;
+    }
+}
